@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ProgressTrackBar">
+        <attr name="p_first_color" format="color"/>
+        <attr name="p_second_color" format="color"/>
+        <attr name="p_width" format="dimension"/>
+        <attr name="p_start" format="float"/>
+        <attr name="p_max_progress" format="float"/>
+
+    </declare-styleable>
+
+</resources>
