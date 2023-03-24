@@ -152,6 +152,7 @@ public class ProgressTrackBar extends View {
         p1.setColor(Color.RED);
 
         int left = x - radius;
+
         int top = y - radius;
         canvas.drawPoint(left, top, p1);
 

@@ -27,6 +27,8 @@ public class VoiceAnimView extends View implements BaseViewContract {
         @Override
         public void run() {
             VoiceAnimView.this.invalidate();
+            //暴露开启动画，暂停动画的接口，根据动效的时间描述，
+            // 我们应该每1000/24=42毫秒去重新绘制，也就是调用：invalidate()方法。
             VoiceAnimView.this.postDelayed(r, 42);
         }
     };
@@ -59,6 +61,12 @@ public class VoiceAnimView extends View implements BaseViewContract {
 //        第4帧：元素1 高14.7px 对应 threeHeight，元素2 高8.3px 对应 oneHeight，其他元素保持初始状态。
 //        第5帧：元素1 高16px 对应 maxHeight，元素2 高15px 对应 halfHeight，其他元素保持初始状态。
 //        第6帧：元素1 高14.7px 对应 threeHeight，元素2 高21.7px 对应 threeHeight，元素3 高10.1px 对应 oneHeight，其他元素保持初始状态。
+
+        //是第几帧，x=0，第1帧时候，y=0，代表原始状态，
+        // y=1，代表元素1 高7.3px 对应 oneHeight，
+        // y=2，代表元素1 高11px 对应 halfHeight，
+        // y=3，代表元素1 高11px 对应 threeHeight，
+        // y=4，代表元素1 高16px 对应 maxHeight，，，
 
 
         points[0] = new VoiceAnimPoint(getWidth() / 2 - 24, getHeight() / 2,
